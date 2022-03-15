@@ -1,9 +1,10 @@
 from django.shortcuts import redirect, render
 from django.views import View
-
+from django.views.generic import ListView, DetailView
 # Create your views here.
 from .models import *
 from .forms import ReviewsForm
+
 class movieView(View):
     
     def get(self, request):

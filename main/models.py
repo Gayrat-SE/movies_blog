@@ -50,7 +50,7 @@ class Movie(models.Model):
     year = models.PositiveSmallIntegerField("year of premiered", default=2019)
     country = models.CharField("country", max_length=70)
     directors = models.ManyToManyField(Actor, verbose_name="directors", related_name="film_director")
-    actors = models.ManyToManyField(Actor, verbose_name="actorss", related_name="film_actor")
+    actors = models.ManyToManyField(Actor, verbose_name="actors", related_name="film_actor")
     genres = models.ManyToManyField(Genre, verbose_name="genres")
     world_premier = models.DateField("premierd_date", default=date.today)
     budget = models.PositiveIntegerField("budget", default=0, help_text="In dollars")
